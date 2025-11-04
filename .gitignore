@@ -1,0 +1,52 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go build outputs
+/build/
+bin/
+cmd/*/bin/
+
+# Local configs
+.env
+*.local
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependency directories (if using vendoring)
+/vendor/
+
+# Logs
+*.log
+
+# Coverage reports
+*.coverprofile
+coverage.out
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+
+
+position.json
+
+internal/mapper
+
+docker-compose.yaml
+config/es*
+config/config.yaml
+config/my.cnf
+
+cmd/binlog-sync/binlog-sync
+
+db_data

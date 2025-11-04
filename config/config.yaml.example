@@ -1,0 +1,81 @@
+# master:
+mysql:
+  host: "xxx.xxx.xxx.xxx"
+  port: xxxx
+  user: "xxx"
+  password: "xxx"
+  database: "xxx"
+  serverid: 1  # MySQL binlog slave id
+  charset: "utf8mb4"
+
+sink:
+  type: "mysql"  # 可选: elasticsearch / postgres / mysql
+  elasticsearch:
+    address: "http://211.81.248.215:9300"
+    index: "xxx"
+    username: xxx
+    password: xxx
+  pgsql:
+    host: "211.81.248.218"
+    port: 7016
+    user: "xxx"
+    password: "xxx"
+    database: "xxx"
+  mysql:
+    host: "211.81.248.218"
+    port: 7015
+    user: "xxx"
+    password: "xxx"
+    database: "xxx"
+    charset: "utf8mb4"
+  redis:
+    host: "localhost"
+    port: 6379
+    password: ""
+    db: 0
+
+# 位置存储配置
+positionStore:
+  type: "redis"  # 存储类型: file 或 redis
+  path: "position.json"  # 文件路径，当type为file时使用
+  redis:
+    host: "localhost"
+    port: xxx
+    password: ""
+    db: 0
+    key: "binlog_position"  # 存储位置的键名
+
+# 批处理配置
+batch:
+  enabled: true  # 是否启用批处理
+  size: 500  # 批处理大小
+  timeout: 5  # 批处理超时时间（秒）
+queueSize: 200  # binlog缓冲区大小
+
+# 连接池配置
+connectionPool:
+  maxOpen: 10  # 最大打开连接数
+  maxIdle: 5   # 最大空闲连接数
+  maxLifetime: 300  # 连接最大生命周期（秒）
+
+# 超时配置
+timeout:
+  context: 5
+
+# Binlog配置
+binlog:
+  startPosition: 4  # 上下文超时时间（秒）
+
+tables:
+  - sourceTable: "dddd"
+    fields: ["dd"]
+    fieldMap:
+      name: "username"
+      email: "user_email"
+    targetTable: "dddd"
+  - sourceTable: "orders"
+    fields: ["dd"]
+    fieldMap:
+      name: "username"
+      email: "user_email"
+    targetTable: "orders"
