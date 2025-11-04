@@ -28,11 +28,6 @@ sink:
     password: "xxx"
     database: "xxx"
     charset: "utf8mb4"
-  redis:
-    host: "localhost"
-    port: 6379
-    password: ""
-    db: 0
 
 # 位置存储配置
 positionStore:
@@ -68,8 +63,8 @@ binlog:
 
 tables:
   - sourceTable: "dddd"
-    fields: ["dd"]
-    fieldMap:
+    fields: ["dd"]  # TODO 这块的功能还没写完
+    fieldMap:       # TODO 这块的功能还没写完
       name: "username"
       email: "user_email"
     targetTable: "dddd"
