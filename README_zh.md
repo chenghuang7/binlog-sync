@@ -2,7 +2,6 @@
 
 [![Go Version](https://img.shields.io/badge/Go-1.18+-blue.svg)](https://golang.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg?logo=docker)](https://www.docker.com/)
 
 [English](./README.md) | 简体中文
 
